@@ -22,15 +22,13 @@ export default {
     return {
       notes: [
         /* {
-        id: 1,
-        title: 'First Note Title',
-        content: 'First Note Content'
-      },
-      {
-        id: 2,
-        title: 'Second Note Title',
-        content: 'Second Note Content'
-      } */
+          title: "First Note Title",
+          content: "First Note Content"
+        },
+        {
+          title: "Second Note Title",
+          content: "Second Note Content"
+        } */
       ]
     };
   },

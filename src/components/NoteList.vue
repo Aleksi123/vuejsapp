@@ -1,21 +1,22 @@
 <template>
   <div>
-    <div v-for="note in notes" v-bind:key="note.id">
+    <div v-for="note in notes" v-bind:key="notes.indexOf(note)">
       <b-list-group>
-        <Note v-bind:note="note" v-on:del-note="$emit('del-note', note.id)" />
+        <b-list-group-item>
+          Title: {{note.title}}
+          <br />
+          Content: {{note.content}}
+          <br />
+          <b-button v-on:click="$emit('del-note',notes.indexOf(note))" variant="danger">Delete</b-button>
+        </b-list-group-item>
       </b-list-group>
     </div>
   </div>
 </template>
 
 <script>
-import Note from "./Note";
-
 export default {
   name: "NoteList",
-  components: {
-    Note
-  },
   props: ["notes"]
 };
 </script>
